@@ -1,0 +1,29 @@
+# --- Secrets (local only) ---------------------------------------------------
+# Real API keys live here; copy ApiKeys.inc.template -> ApiKeys.inc to set up.
+ApiKeys.inc
+
+# --- Delphi / RAD Studio build output ---------------------------------------
+Win32/
+Win64/
+Android/
+Android64/
+iOSDevice64/
+OSX64/
+Linux64/
+__history/
+__recovery/
+*.dcu
+*.o
+*.exe
+*.map
+*.drc
+*.identcache
+
+# --- IDE per-user / local files (not source) --------------------------------
+*.local
+*.dsk
+*.dsv
+*.~dsk
+*.tvsconfig
+*.res
+.claude/settings.local.json
