@@ -1,4 +1,4 @@
-# EV Charger Finder
+﻿# EV Charger Finder
 
 A Delphi **FireMonkey (FMX)** desktop application that finds EV charging
 stations near a ZIP code. Enter a ZIP, press **Search**, and you get a
@@ -56,15 +56,9 @@ key is kept out of source control via a git-ignored include file:
 
 ## Building & running
 
-1. Open `EVChargerFinder.dproj` in the RAD Studio / Delphi IDE
-   (Delphi 11 Alexandria or 12 Athens recommended).
-2. Select the **Windows 32-bit** (or 64-bit) target platform.
-3. Press **Run** (F9), or build with the command line:
-
-   ```
-   "C:\Program Files (x86)\Embarcadero\Studio\23.0\bin\rsvars.bat"
-   msbuild EVChargerFinder.dproj /p:Config=Release /p:Platform=Win32
-   ```
+1. Open `EVChargerFinder.dproj` in the RAD Studio / Delphi IDE (should work from Delphi 11 Alexandria or up; I tested it with Delphi 13 Florence)
+2. Set your API Key in the include file (see comments above for `ApiKeys.inc`)
+3. Press **Run** (F9)
 
 The IDE generates `EVChargerFinder.res` automatically on the first build.
 
@@ -94,3 +88,10 @@ of result rows (one `TStationCard` frame instantiated per station).
 - Planned follow-ups: a map view, real-time availability where networks expose
   it, filtering by charger type/connector, and Android/iOS targets (FireMonkey
   makes this mostly a recompile).
+
+## Screenshot
+
+When running on my Windows machine, this is what it looks like:
+
+![Screenshot](RunningScreenshot.jpg)
+
