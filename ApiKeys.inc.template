@@ -1,0 +1,18 @@
+{ ----------------------------------------------------------------------------
+  API key template.
+
+  FIRST-TIME SETUP:
+    1. Copy this file to "ApiKeys.inc" (same folder, drop the .template).
+    2. Paste your Open Charge Map key below.
+
+  ApiKeys.inc is listed in .gitignore, so your key is never committed.
+  This file is textually included into the const section of MainForm.pas
+  via the {$I ApiKeys.inc} directive.
+
+  Get a free Open Charge Map key (takes a minute):
+    https://openchargemap.org/site/loginprovider/beginlogin
+    then My Profile > My Apps > create an application.
+
+  Open Charge Map also works without a key for light use -- leave it as ''.
+  ---------------------------------------------------------------------------- }
+OCM_KEY = '';

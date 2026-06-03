@@ -1,0 +1,208 @@
+object MainFrm: TMainFrm
+  Left = 0
+  Top = 0
+  Caption = 'EV Charger Finder'
+  ClientHeight = 720
+  ClientWidth = 1100
+  Fill.Color = xFF0B0E0B
+  Fill.Kind = Solid
+  Position = ScreenCenter
+  FormFactor.Width = 1100
+  FormFactor.Height = 720
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object LeftPanel: TRectangle
+    Align = Left
+    Fill.Color = xFF0F130F
+    Size.Width = 380.00000000000000000
+    Size.Height = 720.00000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object Divider: TRectangle
+      Align = Right
+      Fill.Color = xFF272D27
+      Position.X = 379.00000000000000000
+      Size.Width = 1.00000000000000000
+      Size.Height = 720.00000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+    end
+    object CarIcon: TPath
+      Fill.Kind = None
+      HitTest = False
+      Position.X = 122.00000000000000000
+      Position.Y = 64.00000000000000000
+      Size.Width = 135.00000000000000000
+      Size.Height = 78.00000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF8BE04B
+      Stroke.Thickness = 2.59999990463256800
+      WrapMode = Original
+    end
+    object TitleLabel: TLabel
+      StyledSettings = []
+      Position.X = 20.00000000000000000
+      Position.Y = 150.00000000000000000
+      Size.Width = 340.00000000000000000
+      Size.Height = 38.00000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 27.00000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFFF2F4F2
+      TextSettings.HorzAlign = Center
+      Text = 'EV Charger Finder'
+    end
+    object SubtitleLabel: TLabel
+      StyledSettings = []
+      Position.X = 20.00000000000000000
+      Position.Y = 190.00000000000000000
+      Size.Width = 340.00000000000000000
+      Size.Height = 22.00000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.50000000000000000
+      TextSettings.FontColor = xFF9AA0A6
+      TextSettings.HorzAlign = Center
+      Text = 'Find charging stations near you.'
+    end
+    object ZipLabel: TLabel
+      StyledSettings = []
+      Position.X = 40.00000000000000000
+      Position.Y = 250.00000000000000000
+      Size.Width = 300.00000000000000000
+      Size.Height = 20.00000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.00000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFFF2F4F2
+      Text = 'Zip Code'
+    end
+    object InputBox: TRectangle
+      Fill.Color = xFF101510
+      Position.X = 40.00000000000000000
+      Position.Y = 278.00000000000000000
+      Size.Width = 300.00000000000000000
+      Size.Height = 52.00000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF272D27
+      XRadius = 10.00000000000000000
+      YRadius = 10.00000000000000000
+      object ZipEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        Text = '97229'
+        TextSettings.Font.Size = 16.00000000000000000
+        TextSettings.FontColor = xFFF2F4F2
+        Margins.Left = 14.00000000000000000
+        Margins.Top = 3.00000000000000000
+        Margins.Right = 14.00000000000000000
+        Margins.Bottom = 3.00000000000000000
+        Size.Width = 272.00000000000000000
+        Size.Height = 46.00000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Enter ZIP code'
+        StyledSettings = [Family, Style]
+        OnApplyStyleLookup = ZipEditApplyStyleLookup
+        OnKeyDown = ZipEditKeyDown
+      end
+    end
+    object SearchBtn: TRectangle
+      Cursor = crHandPoint
+      Fill.Color = x008BE04B
+      Position.X = 40.00000000000000000
+      Position.Y = 348.00000000000000000
+      Size.Width = 300.00000000000000000
+      Size.Height = 52.00000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF8BE04B
+      Stroke.Thickness = 1.39999997615814200
+      XRadius = 10.00000000000000000
+      YRadius = 10.00000000000000000
+      OnClick = SearchClick
+      OnMouseEnter = SearchMouseEnter
+      OnMouseLeave = SearchMouseLeave
+      object SearchIcon: TPath
+        Fill.Kind = None
+        HitTest = False
+        Position.X = 102.00000000000000000
+        Position.Y = 15.00000000000000000
+        Size.Width = 22.00000000000000000
+        Size.Height = 22.00000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF8BE04B
+        Stroke.Thickness = 2.20000004768371600
+        WrapMode = Original
+      end
+      object SearchLabel: TLabel
+        StyledSettings = []
+        Position.X = 134.00000000000000000
+        Position.Y = 14.00000000000000000
+        Size.Width = 90.00000000000000000
+        Size.Height = 24.00000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 15.00000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = xFF8BE04B
+        Text = 'Search'
+      end
+    end
+    object Illustration: TPath
+      Anchors = [akLeft, akBottom]
+      Fill.Kind = None
+      HitTest = False
+      Opacity = 0.85000002384185790
+      Position.X = 40.00000000000000000
+      Position.Y = 470.00000000000000000
+      Size.Width = 310.00000000000000000
+      Size.Height = 185.00000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF8BE04B
+      Stroke.Thickness = 2.40000009536743200
+      WrapMode = Original
+    end
+    object StatusLabel: TLabel
+      Anchors = [akLeft, akBottom]
+      StyledSettings = []
+      Position.X = 40.00000000000000000
+      Position.Y = 680.00000000000000000
+      Size.Width = 320.00000000000000000
+      Size.Height = 22.00000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = xFF6B716B
+      Text = 'Ready.'
+    end
+  end
+  object RightPanel: TLayout
+    Align = Client
+    Padding.Left = 32.00000000000000000
+    Padding.Top = 26.00000000000000000
+    Padding.Right = 24.00000000000000000
+    Padding.Bottom = 20.00000000000000000
+    Size.Width = 720.00000000000000000
+    Size.Height = 720.00000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object HeaderLabel: TLabel
+      Align = Top
+      StyledSettings = []
+      Position.X = 32.00000000000000000
+      Position.Y = 26.00000000000000000
+      Size.Width = 664.00000000000000000
+      Size.Height = 44.00000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 22.00000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFFF2F4F2
+      Text = 'Nearby Stations'
+    end
+    object StationsBox: TVertScrollBox
+      Align = Client
+      Margins.Top = 8.00000000000000000
+      Size.Width = 664.00000000000000000
+      Size.Height = 622.00000000000000000
+      Size.PlatformDefault = False
+      Viewport.Width = 664.00000000000000000
+      Viewport.Height = 622.00000000000000000
+    end
+  end
+end

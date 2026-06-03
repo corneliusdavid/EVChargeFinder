@@ -1,0 +1,130 @@
+object StationCard: TStationCard
+  Size.Width = 700.00000000000000000
+  Size.Height = 132.00000000000000000
+  Size.PlatformDefault = False
+  object Card: TRectangle
+    Align = Client
+    Fill.Color = xFF161B16
+    Margins.Bottom = 14.00000000000000000
+    Size.Width = 700.00000000000000000
+    Size.Height = 118.00000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = xFF272D27
+    XRadius = 14.00000000000000000
+    YRadius = 14.00000000000000000
+    object PinFill: TPath
+      Fill.Color = xFF8BE04B
+      HitTest = False
+      Position.X = 24.00000000000000000
+      Position.Y = 30.00000000000000000
+      Size.Width = 44.00000000000000000
+      Size.Height = 56.00000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      WrapMode = Original
+    end
+    object PinBolt: TPath
+      Fill.Color = xFF161B16
+      HitTest = False
+      Position.X = 24.00000000000000000
+      Position.Y = 30.00000000000000000
+      Size.Width = 44.00000000000000000
+      Size.Height = 56.00000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      WrapMode = Original
+    end
+    object lblDistance: TLabel
+      Align = Right
+      StyledSettings = []
+      Margins.Top = 18.00000000000000000
+      Margins.Right = 20.00000000000000000
+      Position.X = 584.00000000000000000
+      Position.Y = 18.00000000000000000
+      Size.Width = 96.00000000000000000
+      Size.Height = 100.00000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.00000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF9AA0A6
+      TextSettings.HorzAlign = Trailing
+      TextSettings.VertAlign = Leading
+      Text = '0.0 mi'
+    end
+    object Content: TLayout
+      Align = Client
+      Margins.Left = 92.00000000000000000
+      Margins.Right = 104.00000000000000000
+      Size.Width = 388.00000000000000000
+      Size.Height = 118.00000000000000000
+      Size.PlatformDefault = False
+      object lblName: TLabel
+        Align = Top
+        StyledSettings = []
+        Margins.Top = 22.00000000000000000
+        Position.Y = 22.00000000000000000
+        Size.Width = 388.00000000000000000
+        Size.Height = 26.00000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 17.00000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = xFFF2F4F2
+        Text = 'Station Name'
+      end
+      object lblAddress: TLabel
+        Align = Top
+        StyledSettings = []
+        Margins.Top = 2.00000000000000000
+        Position.Y = 50.00000000000000000
+        Size.Width = 388.00000000000000000
+        Size.Height = 20.00000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 12.50000000000000000
+        TextSettings.FontColor = xFF9AA0A6
+        Text = 'Address'
+      end
+      object BadgeRow: TLayout
+        Align = Top
+        Margins.Top = 12.00000000000000000
+        Position.Y = 82.00000000000000000
+        Size.Width = 388.00000000000000000
+        Size.Height = 30.00000000000000000
+        Size.PlatformDefault = False
+        object Badge: TRectangle
+          Align = Left
+          Fill.Color = xFF1E241E
+          Size.Width = 88.00000000000000000
+          Size.Height = 30.00000000000000000
+          Size.PlatformDefault = False
+          Stroke.Kind = None
+          XRadius = 8.00000000000000000
+          YRadius = 8.00000000000000000
+          object lblBadge: TLabel
+            Align = Client
+            StyledSettings = []
+            Size.Width = 88.00000000000000000
+            Size.Height = 30.00000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 12.50000000000000000
+            TextSettings.FontColor = xFFCBD1CB
+            TextSettings.HorzAlign = Center
+            Text = 'DC Fast'
+          end
+        end
+        object lblPorts: TLabel
+          Align = Left
+          StyledSettings = []
+          Margins.Left = 14.00000000000000000
+          Position.X = 102.00000000000000000
+          Size.Width = 140.00000000000000000
+          Size.Height = 30.00000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 12.50000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = xFF8BE04B
+          Text = '0 Ports'
+        end
+      end
+    end
+  end
+end
