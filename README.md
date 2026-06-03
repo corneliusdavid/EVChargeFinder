@@ -1,5 +1,10 @@
 ﻿# EV Charger Finder
 
+---
+#### NOTE: This was directly inspired by [Sarina Dupont's blog](https://blogs.embarcadero.com/vibe-coding-with-kai-building-a-real-vcl-windows-app-from-a-simple-prompt/) about the new Embarcadero product, [Kai](https://www.embarcadero.com/products/rad-studio/kai), where she vibe-coded this app. I simply wanted to see how well Claude Code could build a Firemonkey version of the same thing (her's was a VCL app). My effort took about three hours, including only minor tweaks of the code, some editing of the documentation, and creating this repository.
+
+---
+
 A Delphi **FireMonkey (FMX)** desktop application that finds EV charging
 stations near a ZIP code. Enter a ZIP, press **Search**, and you get a
 scrollable list of nearby stations showing the **distance**, **charger type**
@@ -94,4 +99,5 @@ of result rows (one `TStationCard` frame instantiated per station).
 When running on my Windows machine, this is what it looks like:
 
 ![Screenshot](RunningScreenshot.jpg)
+
 
