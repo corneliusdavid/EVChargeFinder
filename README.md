@@ -86,8 +86,8 @@ of result rows (one `TStationCard` frame instantiated per station).
 
 ## Notes & next iterations
 
-- The UI is constructed entirely in code so the look matches the mockup
-  precisely without shipping a custom FMX style file.
+- The UI was originally constructed entirely in code so the look matches the mockup
+  precisely without shipping a custom FMX style file; but I like to see things at design-time so instructed Claude to change it (besides, it took much longer to draw it from code than to stream it from the .dfm).
 - The network request runs on a background thread (`TTask`); results are
   marshalled back to the UI thread via `TThread.Queue`.
 - Planned follow-ups: a map view, real-time availability where networks expose
